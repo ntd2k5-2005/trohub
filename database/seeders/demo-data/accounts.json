@@ -1,0 +1,23 @@
+[
+  {
+    "id": "USR-001",
+    "name": "Minh Anh",
+    "email": "minh@example.test",
+    "platform_group": "USER",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "USR-002",
+    "name": "Nguyễn An",
+    "email": "an@example.test",
+    "platform_group": "USER",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "USR-804",
+    "name": "Tài khoản #804",
+    "email": "u804@example.test",
+    "platform_group": "USER",
+    "status": "RESTRICTED"
+  }
+]

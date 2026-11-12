@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TrọHub">
+  <rect width="64" height="64" rx="18" fill="#5B5BD6"/>
+  <path d="M15 31.5 32 17l17 14.5v17a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4v-17Z" fill="white" opacity=".96"/>
+  <path d="M26 52V36h12v16" fill="#5B5BD6"/>
+  <circle cx="43.5" cy="24" r="5.5" fill="#14B8A6"/>
+</svg>

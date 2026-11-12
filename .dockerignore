@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+vendor
+node_modules
+.git
+storage
+!storage/**/.gitignore
+bootstrap/cache/*.php
+public/hot
+public/storage
+database/*.sqlite*
+docs
+tests
+*.zip

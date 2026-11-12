@@ -1,0 +1,26 @@
+[
+  {
+    "id": "GW-A-01",
+    "workspace_id": "WSP-001",
+    "type": "ESP32_GATEWAY",
+    "assignment": "PRO-001",
+    "health": "ONLINE",
+    "config_version": "v12"
+  },
+  {
+    "id": "GAS-302",
+    "workspace_id": "WSP-001",
+    "type": "GAS_SENSOR",
+    "assignment": "ROOM-302",
+    "health": "HEALTHY",
+    "config_version": "v5"
+  },
+  {
+    "id": "SMK-302",
+    "workspace_id": "WSP-001",
+    "type": "SMOKE_SENSOR",
+    "assignment": "ROOM-302",
+    "health": "HEALTHY",
+    "config_version": "v5"
+  }
+]

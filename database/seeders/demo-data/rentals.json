@@ -1,0 +1,22 @@
+[
+  {
+    "id": "RT-2026-00302",
+    "room_id": "ROOM-302",
+    "tenant_ids": [
+      "USR-002"
+    ],
+    "start": "2026-06-01",
+    "end": "2027-05-31",
+    "deposit": 4200000,
+    "state": "ACTIVE"
+  },
+  {
+    "id": "RT-2026-A203",
+    "room_id": "ROOM-A203",
+    "tenant_ids": [],
+    "start": "2026-10-01",
+    "end": null,
+    "deposit": null,
+    "state": "DRAFT"
+  }
+]

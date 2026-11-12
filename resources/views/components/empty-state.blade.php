@@ -1,0 +1,2 @@
+@props(['title','description'=>null,'action'=>null])
+<div class="app-card grid min-h-56 place-items-center p-8 text-center"><div><div class="mx-auto mb-3 grid h-12 w-12 place-items-center rounded-2xl bg-slate-100 text-xl dark:bg-slate-800">◇</div><h3 class="font-semibold">{{ $title }}</h3>@if($description)<p class="mx-auto mt-2 max-w-md text-sm text-slate-500">{{ $description }}</p>@endif @if($action)<button class="app-button-primary mt-4">{{ $action }}</button>@endif</div></div>

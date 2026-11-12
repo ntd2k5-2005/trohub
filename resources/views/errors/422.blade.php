@@ -1,0 +1,1 @@
+@include('errors.friendly',['status'=>422,'title'=>'Cần kiểm tra lại thông tin','description'=>'Thông tin gửi lên chưa phù hợp với điều kiện hiện tại. Hãy quay lại, kiểm tra và điều chỉnh trước khi thử lại.'])

@@ -1,0 +1,18 @@
+<form method="get" @if(!empty($screen['landing'])) action="{{ route('ui.show', ['slug'=>'marketplace-search']) }}" @endif class="app-card housing-filters p-4 sm:p-5">
+<input type="hidden" name="context" value="{{ $context }}">@if($context==='workspace')<input type="hidden" name="workspace_id" value="{{ $currentWorkspace->id }}">@endif
+@foreach(['tab','room_id'] as $key)@if(request($key))<input type="hidden" name="{{ $key }}" value="{{ request($key) }}">@endif @endforeach
+<div class="housing-search"><label for="housing-q">Tìm kiếm</label><input id="housing-q" name="q" class="app-input" value="{{ request('q') }}" placeholder="Tên phòng, đường hoặc khu vực…"></div>
+@if($screen['marketplace'])
+<div><label for="housing-district">Khu vực</label><input id="housing-district" name="district" class="app-input" value="{{ request('district') }}" placeholder="Quận, huyện…"></div>
+<div><label for="housing-sort">Sắp xếp</label><select id="housing-sort" name="sort" class="app-input"><option value="newest">Mới nhất</option><option value="price_asc" @selected(request('sort')==='price_asc')>Giá tăng dần</option><option value="price_desc" @selected(request('sort')==='price_desc')>Giá giảm dần</option></select></div>
+<details class="housing-filter-more" @if(request()->anyFilled(['min_price','max_price','min_area','capacity','amenity','room_type','move_in'])) open @endif><summary class="cursor-pointer text-sm font-semibold">Giá thuê, diện tích & tiện nghi</summary><div class="housing-filter-fields mt-4">@foreach(['min_price'=>'Giá từ (đồng)','max_price'=>'Giá đến (đồng)','min_area'=>'Diện tích từ (m²)','capacity'=>'Số người'] as $key=>$label)<div><label for="filter-{{ $key }}">{{ $label }}</label><input id="filter-{{ $key }}" name="{{ $key }}" type="number" min="{{ $key==='capacity' ? 1 : 0 }}" class="app-input" value="{{ request($key) }}"></div>@endforeach<div><label for="housing-amenity">Tiện nghi</label><input id="housing-amenity" name="amenity" class="app-input" value="{{ request('amenity') }}" placeholder="Ví dụ: Wifi"></div></div></details>
+@else
+@if(!empty($screen['property_options']) && request('tab')!=='houses')<div><label for="housing-property">Nhà trọ</label><select id="housing-property" name="property_id" class="app-input"><option value="">Tất cả nhà trọ</option>@foreach($screen['property_options'] as $id=>$name)<option value="{{ $id }}" @selected(request('property_id')==$id)>{{ $name }}</option>@endforeach</select></div>@endif
+@if(!empty($screen['status_options']) && request('tab')!=='houses')<div><label for="housing-status">Trạng thái</label><select id="housing-status" name="status" class="app-input"><option value="">Tất cả trạng thái</option>@foreach($screen['status_options'] as $key=>$label)<option value="{{ $key }}" @selected(request('status')===$key)>{{ $label }}</option>@endforeach</select></div>@endif
+@endif
+@if($screen['marketplace'])
+<div><label for="filter-room-type">Loại phòng</label><select class="app-input" id="filter-room-type" name="room_type"><option value="">Tất cả loại phòng</option>@foreach(\App\Modules\Property\HousingTypes::options() as $value=>$label)<option value="{{ $value }}" @selected(request('room_type')===$value)>{{ $label }}</option>@endforeach</select></div>
+<div><label for="filter-move-in">Ngày dự kiến vào ở</label><input class="app-input" id="filter-move-in" type="date" name="move_in" value="{{ request('move_in') }}"></div>
+@endif
+<div class="housing-filter-buttons"><button class="app-button-primary">Tìm kiếm</button><a class="app-button-muted" href="{{ route('ui.show',['slug'=>$page['slug'],'context'=>$context]+request()->only(['workspace_id','tab','room_id'])) }}">Đặt lại</a></div>
+</form>

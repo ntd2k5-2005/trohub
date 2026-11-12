@@ -1,0 +1,8 @@
+@if($record['contact_allowed'])
+@if(config('features.internal_chat') && app(\App\Contracts\Authorization::class)->personal(auth()->user(),'chat.send'))
+<form method="post" action="{{ route('conversation.open') }}">@csrf<input type="hidden" name="listing_id" value="{{ $record['listing_id'] }}"><input type="hidden" name="intent" value="chat"><button class="app-button-primary w-full">Nhắn tin cho bên cho thuê</button></form>
+@endif
+<details class="mt-3" @if(old('intent')==='viewing') open @endif><summary class="app-button-muted w-full cursor-pointer">Hẹn xem phòng</summary><form method="post" action="{{ route('conversation.open') }}" class="mt-4 space-y-3">@csrf<input type="hidden" name="listing_id" value="{{ $record['listing_id'] }}"><input type="hidden" name="intent" value="viewing"><label class="block text-sm" for="viewing-date">Ngày, giờ bạn muốn xem</label><input class="app-input" id="viewing-date" type="datetime-local" name="viewing_at" required min="{{ now()->format('Y-m-d\TH:i') }}" value="{{ old('viewing_at') }}"><label for="viewing-note" class="block text-sm">Lời nhắn (không bắt buộc)</label><textarea id="viewing-note" name="message" class="app-input" rows="3" maxlength="2000">{{ old('intent')==='viewing' ? old('message') : '' }}</textarea><button class="app-button-primary w-full">Gửi lịch đề xuất</button></form></details>
+
+@elseif(!auth()->check())<a class="app-button-primary w-full" href="{{ route('login', ['listing' => $record['listing_id']]) }}">Đăng nhập để liên hệ</a><p class="mt-3 text-sm leading-6 text-slate-500">Trao đổi với bên cho thuê, hẹn xem và lưu những phòng bạn quan tâm.</p>
+@else<p class="text-sm text-slate-500">Bạn chưa thể gửi liên hệ với tin này từ tài khoản hiện tại.</p>@endif

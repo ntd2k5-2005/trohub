@@ -1,0 +1,90 @@
+name: trohub-delivery
+x-app: &app
+  image: trohub-delivery-app:local
+  build: .
+  env_file: .env
+  environment: &app-env
+    APP_ENV: local
+    APP_DEBUG: "false"
+    APP_URL: http://localhost:${APP_PORT:-8088}
+    APP_KEY: ""
+    DB_URL: ""
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_PORT: 3306
+    DB_DATABASE: trohub
+    DB_USERNAME: trohub
+    DB_PASSWORD: ${DB_PASSWORD:?Run CHAY.bat or ./start.sh first}
+    MAIL_MAILER: smtp
+    MAIL_HOST: mailpit
+    MAIL_PORT: 1025
+    MAIL_USERNAME: ""
+    MAIL_PASSWORD: ""
+    MAIL_FROM_ADDRESS: hello@trohub.test
+    QUEUE_CONNECTION: database
+    EMAIL_AUTH_QUEUE: "true"
+    SESSION_DRIVER: file
+    CACHE_STORE: file
+    MONGODB_ENABLED: "false"
+    REDIS_ENABLED: "false"
+    CASSANDRA_ENABLED: "false"
+    NEO4J_ENABLED: "false"
+    MEILISEARCH_ENABLED: "false"
+    SOCIAL_LOGIN_GOOGLE_ENABLED: "false"
+    SOCIAL_LOGIN_FACEBOOK_ENABLED: "false"
+    SOCIAL_LOGIN_SHOW_BUTTONS: "false"
+    FEATURE_ANALYTICS: "false"
+    BIGDATA_ENABLED: "false"
+    DEMO_PASSWORD: ${DEMO_PASSWORD:-Abcd@1234}
+    TROHUB_DEMO_PASSWORD: ${DEMO_PASSWORD:-Abcd@1234}
+    TROHUB_DEMO_DATE: "2026-11-02"
+  volumes:
+    - app-storage:/var/www/html/storage
+services:
+  mysql:
+    image: mysql:8.4@sha256:a81d043930e51745522bd5c430961cf8286f0a23f0a9a2a6e0108f7ea71b0902
+    environment:
+      MYSQL_DATABASE: trohub
+      MYSQL_USER: trohub
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Missing database password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Missing root password}
+    volumes: ["mysql-data:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD-SHELL", 'MYSQL_PWD="$$MYSQL_PASSWORD" mysql -h 127.0.0.1 -u trohub trohub -e "SELECT 1" >/dev/null 2>&1']
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 30s
+  mailpit:
+    image: axllent/mailpit:v1.27@sha256:e22dce5b36f93c77082e204a3942fb6b283b7896e057458400a4c88344c3df68
+    ports: ["127.0.0.1:${MAIL_PORT:-8025}:8025"]
+  init:
+    <<: *app
+    command: ["init"]
+    depends_on:
+      mysql: {condition: service_healthy}
+  app:
+    <<: *app
+    ports: ["127.0.0.1:${APP_PORT:-8088}:80"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+      mailpit: {condition: service_started}
+    healthcheck:
+      test: ["CMD", "php", "docker/health.php"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 30s
+  worker:
+    <<: *app
+    command: ["worker"]
+    depends_on:
+      app: {condition: service_healthy}
+  scheduler:
+    <<: *app
+    command: ["scheduler"]
+    depends_on:
+      app: {condition: service_healthy}
+volumes:
+  mysql-data:
+  app-storage:

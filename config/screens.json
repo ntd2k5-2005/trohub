@@ -1,0 +1,704 @@
+[
+  {
+    "slug": "access-control",
+    "label": "Phân quyền hệ thống",
+    "title": "Nhóm quyền & quyền truy cập",
+    "contexts": [
+      "system-admin"
+    ],
+    "order": 1,
+    "group_order": 1,
+    "nav": true,
+    "_module": "accesscontrol",
+    "_asset_key": "access-control",
+    "permission": "access.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "admin-dashboard",
+    "label": "Tổng quan",
+    "title": "Tổng quan quản trị",
+    "contexts": [
+      "platform-admin"
+    ],
+    "order": 1,
+    "group_order": 1,
+    "nav": true,
+    "_module": "admin",
+    "_asset_key": "admin",
+    "permission": "account.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "admin-accounts",
+    "label": "Tài khoản",
+    "title": "Quản lý tài khoản",
+    "contexts": [
+      "platform-admin"
+    ],
+    "order": 2,
+    "group_order": 2,
+    "nav": true,
+    "_module": "admin",
+    "_asset_key": "admin",
+    "permission": "account.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "moderation",
+    "label": "Kiểm duyệt",
+    "title": "Nội dung cần kiểm duyệt",
+    "contexts": [
+      "platform-admin"
+    ],
+    "order": 3,
+    "group_order": 2,
+    "nav": true,
+    "_module": "admin",
+    "_asset_key": "admin",
+    "permission": "listing.moderate",
+    "view": "product.screen"
+  },
+  {
+    "slug": "admin-reports",
+    "label": "Báo cáo vi phạm",
+    "title": "Xử lý báo cáo vi phạm",
+    "contexts": [
+      "platform-admin"
+    ],
+    "order": 4,
+    "group_order": 2,
+    "nav": true,
+    "_module": "admin",
+    "_asset_key": "admin",
+    "permission": "report.manage",
+    "view": "product.screen"
+  },
+  {
+    "slug": "moderation-history",
+    "label": "Lịch sử xử lý",
+    "title": "Lịch sử kiểm duyệt",
+    "contexts": [
+      "platform-admin"
+    ],
+    "order": 5,
+    "group_order": 2,
+    "nav": false,
+    "_module": "admin",
+    "_asset_key": "admin",
+    "permission": "listing.moderate",
+    "view": "product.screen"
+  },
+  {
+    "slug": "analytics-overview",
+    "label": "Phân tích",
+    "title": "Phân tích vận hành",
+    "contexts": [
+      "workspace",
+      "system-admin"
+    ],
+    "order": 17,
+    "group_order": 9,
+    "nav": true,
+    "_module": "analytics",
+    "_asset_key": "analytics",
+    "permission": "analytics.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "analytics-funnel",
+    "label": "Hiệu quả cho thuê",
+    "title": "Hiệu quả tìm kiếm đến thuê phòng",
+    "contexts": [
+      "workspace",
+      "system-admin"
+    ],
+    "order": 18,
+    "group_order": 9,
+    "nav": true,
+    "_module": "analytics",
+    "_asset_key": "analytics",
+    "permission": "analytics.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "analytics-forecast",
+    "label": "Dự báo nhu cầu",
+    "title": "Dự báo nhu cầu thuê",
+    "contexts": [
+      "workspace",
+      "system-admin"
+    ],
+    "order": 19,
+    "group_order": 9,
+    "nav": true,
+    "_module": "analytics",
+    "_asset_key": "analytics",
+    "permission": "analytics.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "analytics-lineage",
+    "label": "Chất lượng dữ liệu",
+    "title": "Chất lượng dữ liệu & mô hình",
+    "contexts": [
+      "system-admin"
+    ],
+    "order": 20,
+    "group_order": 9,
+    "nav": false,
+    "_module": "analytics",
+    "_asset_key": "analytics",
+    "permission": "data.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "billing",
+    "label": "Hóa đơn & công nợ",
+    "title": "Hóa đơn & công nợ",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 8,
+    "group_order": 5,
+    "nav": true,
+    "_module": "billing",
+    "_asset_key": "billing",
+    "permission": "invoice.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "utilities",
+    "label": "Điện nước",
+    "title": "Chỉ số điện nước",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 9,
+    "group_order": 5,
+    "nav": true,
+    "_module": "billing",
+    "_asset_key": "billing",
+    "permission": "utility.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "payments",
+    "label": "Thanh toán",
+    "title": "Lịch sử thanh toán",
+    "contexts": [
+      "workspace",
+      "personal"
+    ],
+    "order": 10,
+    "group_order": 5,
+    "nav": true,
+    "_module": "billing",
+    "_asset_key": "billing",
+    "permission": "payment.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "my-invoices",
+    "label": "Hóa đơn của tôi",
+    "title": "Hóa đơn của tôi",
+    "contexts": [
+      "personal"
+    ],
+    "order": 7,
+    "group_order": 5,
+    "nav": true,
+    "_module": "billing",
+    "_asset_key": "billing",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "connections",
+    "label": "Quan tâm & lịch xem",
+    "title": "Yêu cầu quan tâm & lịch xem",
+    "contexts": [
+      "personal"
+    ],
+    "order": 3,
+    "group_order": 3,
+    "nav": true,
+    "_module": "connection",
+    "_asset_key": "connection",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "workspace-leads",
+    "label": "Khách quan tâm",
+    "title": "Khách quan tâm & lịch xem",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 5,
+    "group_order": 3,
+    "nav": true,
+    "_module": "connection",
+    "_asset_key": "connection",
+    "permission": "connection.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "data-platform",
+    "label": "Dữ liệu hệ thống",
+    "title": "Luồng dữ liệu & sự kiện",
+    "contexts": [
+      "system-admin"
+    ],
+    "order": 2,
+    "group_order": 2,
+    "nav": true,
+    "_module": "dataplatform",
+    "_asset_key": "data-platform",
+    "permission": "data.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "personal-dashboard",
+    "label": "Tổng quan",
+    "title": "Tổng quan của tôi",
+    "contexts": [
+      "personal"
+    ],
+    "order": 1,
+    "group_order": 1,
+    "nav": true,
+    "_module": "identity",
+    "_asset_key": "identity",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "profile-security",
+    "label": "Hồ sơ & bảo mật",
+    "title": "Hồ sơ & bảo mật",
+    "contexts": [
+      "personal"
+    ],
+    "order": 98,
+    "group_order": 90,
+    "nav": true,
+    "_module": "identity",
+    "_asset_key": "identity",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "login",
+    "label": "Đăng nhập",
+    "title": "Đăng nhập",
+    "contexts": [
+      "public"
+    ],
+    "order": 90,
+    "group_order": 90,
+    "nav": false,
+    "_module": "identity",
+    "_asset_key": "identity",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "register",
+    "label": "Đăng ký",
+    "title": "Tạo tài khoản",
+    "contexts": [
+      "public"
+    ],
+    "order": 91,
+    "group_order": 90,
+    "nav": false,
+    "_module": "identity",
+    "_asset_key": "identity",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "recover-access",
+    "label": "Khôi phục tài khoản",
+    "title": "Khôi phục tài khoản",
+    "contexts": [
+      "public"
+    ],
+    "order": 92,
+    "group_order": 90,
+    "nav": false,
+    "_module": "identity",
+    "_asset_key": "identity",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "iot-devices",
+    "label": "Thiết bị an toàn",
+    "title": "Quản lý thiết bị an toàn",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 12,
+    "group_order": 7,
+    "nav": true,
+    "_module": "iot",
+    "_asset_key": "io-t",
+    "permission": "iot.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "iot-incidents",
+    "label": "Cảnh báo & nhật ký",
+    "title": "Cảnh báo & nhật ký an toàn",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 13,
+    "group_order": 7,
+    "nav": true,
+    "_module": "iot",
+    "_asset_key": "io-t",
+    "permission": "iot.log.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "room-safety",
+    "label": "An toàn phòng",
+    "title": "An toàn phòng đang thuê",
+    "contexts": [
+      "personal"
+    ],
+    "order": 6,
+    "group_order": 4,
+    "nav": true,
+    "_module": "iot",
+    "_asset_key": "io-t",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "room-safety-history",
+    "label": "Nhật ký an toàn",
+    "title": "Nhật ký an toàn nơi ở",
+    "contexts": [
+      "personal"
+    ],
+    "order": 7,
+    "group_order": 4,
+    "nav": false,
+    "_module": "iot",
+    "_asset_key": "io-t",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "workspace-listings",
+    "label": "Tin cho thuê",
+    "title": "Quản lý tin cho thuê",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 4,
+    "group_order": 3,
+    "nav": true,
+    "_module": "listing",
+    "_asset_key": "listing",
+    "permission": "listing.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "maintenance",
+    "label": "Sửa chữa",
+    "title": "Yêu cầu sửa chữa",
+    "contexts": [
+      "workspace",
+      "personal"
+    ],
+    "order": 11,
+    "group_order": 6,
+    "nav": true,
+    "_module": "maintenance",
+    "_asset_key": "maintenance",
+    "permission": "maintenance.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "marketplace-home",
+    "label": "Trang chủ",
+    "title": "Tìm nơi ở phù hợp với bạn",
+    "contexts": [
+      "public"
+    ],
+    "order": 1,
+    "group_order": 1,
+    "nav": false,
+    "_module": "marketplace",
+    "_asset_key": "marketplace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "marketplace-search",
+    "label": "Tìm phòng",
+    "title": "Tìm phòng trọ",
+    "contexts": [
+      "public",
+      "personal"
+    ],
+    "order": 2,
+    "group_order": 1,
+    "nav": true,
+    "_module": "marketplace",
+    "_asset_key": "marketplace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "listing-detail",
+    "label": "Chi tiết phòng",
+    "title": "Phòng studio · Nguyễn Gia Trí",
+    "contexts": [
+      "public",
+      "personal"
+    ],
+    "order": 3,
+    "group_order": 1,
+    "nav": false,
+    "_module": "marketplace",
+    "_asset_key": "marketplace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "compare-listings",
+    "label": "So sánh phòng",
+    "title": "So sánh các phòng đã chọn",
+    "contexts": [
+      "personal"
+    ],
+    "order": 4,
+    "group_order": 1,
+    "nav": false,
+    "_module": "marketplace",
+    "_asset_key": "marketplace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "favorites",
+    "label": "Đã lưu",
+    "title": "Phòng đã lưu",
+    "contexts": [
+      "personal"
+    ],
+    "order": 2,
+    "group_order": 2,
+    "nav": true,
+    "_module": "marketplace",
+    "_asset_key": "marketplace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "notifications",
+    "label": "Thông báo",
+    "title": "Thông báo",
+    "contexts": [
+      "personal",
+      "workspace",
+      "platform-admin"
+    ],
+    "order": 99,
+    "group_order": 90,
+    "nav": true,
+    "_module": "notification",
+    "_asset_key": "notification",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "properties",
+    "label": "Nhà & phòng",
+    "title": "Danh sách nhà & phòng",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 2,
+    "group_order": 2,
+    "nav": true,
+    "_module": "property",
+    "_asset_key": "property",
+    "permission": "property.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "room-detail",
+    "label": "Chi tiết phòng",
+    "title": "Chi tiết phòng",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 3,
+    "group_order": 2,
+    "nav": false,
+    "_module": "property",
+    "_asset_key": "property",
+    "permission": "property.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "rentals",
+    "label": "Hồ sơ thuê",
+    "title": "Quản lý hồ sơ thuê",
+    "contexts": [
+      "workspace",
+      "personal"
+    ],
+    "order": 6,
+    "group_order": 4,
+    "nav": true,
+    "_module": "rental",
+    "_asset_key": "rental",
+    "permission": "rental.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "rental-detail",
+    "label": "Chi tiết thuê",
+    "title": "Hồ sơ thuê",
+    "contexts": [
+      "workspace",
+      "personal"
+    ],
+    "order": 7,
+    "group_order": 4,
+    "nav": false,
+    "_module": "rental",
+    "_asset_key": "rental",
+    "permission": "rental.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "roommate-discovery",
+    "label": "Tìm người ở ghép",
+    "title": "Tìm người ở ghép phù hợp",
+    "contexts": [
+      "personal"
+    ],
+    "order": 5,
+    "group_order": 2,
+    "nav": true,
+    "_module": "roommate",
+    "_asset_key": "roommate",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "subscription",
+    "label": "Gói dịch vụ",
+    "title": "Gói dịch vụ",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 16,
+    "group_order": 8,
+    "nav": true,
+    "_module": "subscription",
+    "_asset_key": "subscription",
+    "permission": "subscription.manage",
+    "view": "product.screen"
+  },
+  {
+    "slug": "landlord-upgrade",
+    "label": "Đăng ký quản lý trọ",
+    "title": "Mở khu quản lý nhà trọ",
+    "contexts": [
+      "personal"
+    ],
+    "order": 6,
+    "group_order": 8,
+    "nav": true,
+    "_module": "subscription",
+    "_asset_key": "subscription",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "my-reports",
+    "label": "Báo cáo & đánh giá",
+    "title": "Báo cáo & đánh giá",
+    "contexts": [
+      "personal"
+    ],
+    "order": 12,
+    "group_order": 7,
+    "nav": true,
+    "_module": "trust",
+    "_asset_key": "trust",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "workspace-dashboard",
+    "label": "Tổng quan",
+    "title": "Tổng quan nhà trọ",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 1,
+    "group_order": 1,
+    "nav": true,
+    "_module": "workspace",
+    "_asset_key": "workspace",
+    "permission": null,
+    "view": "product.screen"
+  },
+  {
+    "slug": "workspace-settings",
+    "label": "Cài đặt",
+    "title": "Thông tin & thiết lập nhà trọ",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 14,
+    "group_order": 10,
+    "nav": true,
+    "_module": "workspace",
+    "_asset_key": "workspace",
+    "permission": "workspace.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "team-permissions",
+    "label": "Nhân sự & quyền",
+    "title": "Nhân sự & phân quyền",
+    "contexts": [
+      "workspace"
+    ],
+    "order": 15,
+    "group_order": 8,
+    "nav": true,
+    "_module": "workspace",
+    "_asset_key": "workspace",
+    "permission": "member.view",
+    "view": "product.screen"
+  },
+  {
+    "slug": "conversations",
+    "label": "Trò chuyện",
+    "title": "Trò chuyện",
+    "contexts": [
+      "personal",
+      "workspace"
+    ],
+    "order": 1,
+    "group_order": 3,
+    "nav": true,
+    "_module": "chat",
+    "_asset_key": "chat",
+    "permission": null,
+    "view": "product.screen"
+  }
+]

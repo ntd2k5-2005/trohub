@@ -1,0 +1,26 @@
+[
+  {
+    "id": "LST-210",
+    "room_id": "ROOM-A203",
+    "title": "Studio 25 m² · Bình Thạnh",
+    "price": 4200000,
+    "status": "PUBLIC",
+    "lead_count": 6
+  },
+  {
+    "id": "LST-216",
+    "room_id": "ROOM-B105",
+    "title": "Phòng cửa sổ lớn · Gò Vấp",
+    "price": 3800000,
+    "status": "PUBLIC",
+    "lead_count": 3
+  },
+  {
+    "id": "LST-203",
+    "room_id": "ROOM-302",
+    "title": "Studio P302",
+    "price": 4200000,
+    "status": "UNAVAILABLE",
+    "lead_count": 12
+  }
+]

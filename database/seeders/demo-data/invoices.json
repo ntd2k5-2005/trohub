@@ -1,0 +1,14 @@
+[
+  {
+    "id": "INV-302-09",
+    "rental_id": "RT-2026-00302",
+    "period": "2026-09",
+    "rent": 4200000,
+    "utilities": 630000,
+    "services": 150000,
+    "adjustment": 0,
+    "total_due": 4980000,
+    "paid": 4500000,
+    "status": "PARTIALLY_PAID"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "PRO-001",
+    "workspace_id": "WSP-001",
+    "name": "GreenHome Nguyễn Gia Trí",
+    "district": "Bình Thạnh",
+    "rooms": 18,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "PRO-002",
+    "workspace_id": "WSP-001",
+    "name": "GreenHome Phan Văn Trị",
+    "district": "Gò Vấp",
+    "rooms": 10,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "PRO-003",
+    "workspace_id": "WSP-001",
+    "name": "GreenHome Cộng Hòa",
+    "district": "Tân Bình",
+    "rooms": 8,
+    "status": "ACTIVE"
+  }
+]

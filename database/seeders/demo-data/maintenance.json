@@ -1,0 +1,11 @@
+[
+  {
+    "id": "MNT-104",
+    "room_id": "ROOM-302",
+    "reporter_id": "USR-002",
+    "title": "Rò vòi nước",
+    "priority": "MEDIUM",
+    "state": "IN_PROGRESS",
+    "assignee": "Quang"
+  }
+]

@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "./identity.css";
+@import "./shell.css";
+@import "./product.css";
+@import "./people.css";
+@import "./housing.css";
+@import "./chat.css";
+@import "./workflow.css";
+@import "./records.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --radius-app: 1.125rem;
+}
+
+[x-cloak] { display: none !important; }
+
+@layer base {
+  html { color-scheme: light; }
+  html.dark { color-scheme: dark; }
+  body { @apply bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100; }
+  button, a, input, select, textarea { @apply focus-visible:outline-none; }
+  a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--app-primary); outline-offset: 4px; }
+  button, [role="button"], a, select { -webkit-tap-highlight-color: transparent; }
+}
+
+.feature-toast { position: fixed; z-index: 100; bottom: max(24px, env(safe-area-inset-bottom)); right: 24px; width: min(440px, calc(100vw - 32px)); pointer-events: none; }
+.feature-toast-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--color-slate-200); border-radius: 16px; background: white; color: var(--color-slate-700); box-shadow: 0 12px 40px #0f172a1a; pointer-events: auto; }
+.feature-toast-icon { color: var(--app-primary); }
+.dark .feature-toast-card { background: var(--color-slate-900); color: var(--color-slate-100); border-color: var(--color-slate-700); }
+@media (max-width: 480px) { .feature-toast { right: 16px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+@layer components {
+  .app-card {
+    @apply rounded-[var(--app-radius)] border border-slate-200/80 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .app-button,
+  .app-button-primary,
+  .app-button-muted,
+  .app-button-danger,
+  .app-button-ghost {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .app-button-primary {
+    @apply text-white shadow-sm;
+    background: var(--app-primary);
+  }
+
+  .app-button-primary:hover { filter: brightness(1.06); }
+  .app-button-primary:focus-visible { box-shadow: 0 0 0 4px color-mix(in srgb, var(--app-primary) 20%, transparent); }
+
+  .app-button-muted {
+    @apply border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+
+  .app-button-danger { @apply bg-rose-600 text-white hover:bg-rose-500; }
+  .app-button-ghost { @apply bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800; }
+
+  .app-input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-slate-900 outline-none transition placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  }
+
+  .app-input:focus {
+    border-color: color-mix(in srgb, var(--app-primary) 65%, transparent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--app-primary) 15%, transparent);
+  }
+
+  .app-nav-link {
+    @apply flex min-h-10 items-center justify-between rounded-xl px-3 py-2.5 text-sm text-slate-600 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-900;
+  }
+
+  .app-nav-link-active {
+    font-weight: 700;
+    color: var(--app-primary);
+    background: color-mix(in srgb, var(--app-primary) 10%, transparent);
+  }
+
+  .app-status-info {
+    color: var(--app-primary);
+    background: color-mix(in srgb, var(--app-primary) 10%, transparent);
+  }
+
+  .app-soft-accent {
+    color: var(--app-accent);
+    background: color-mix(in srgb, var(--app-accent) 10%, transparent);
+  }
+}

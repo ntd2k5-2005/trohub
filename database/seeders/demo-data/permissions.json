@@ -1,0 +1,22 @@
+[
+  {
+    "code": "property.manage",
+    "category": "Quản lý trọ",
+    "delegable": true
+  },
+  {
+    "code": "invoice.create",
+    "category": "Tài chính",
+    "delegable": true
+  },
+  {
+    "code": "payment.record",
+    "category": "Tài chính",
+    "delegable": true
+  },
+  {
+    "code": "subscription.manage",
+    "category": "Hệ thống",
+    "delegable": false
+  }
+]

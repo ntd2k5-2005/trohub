@@ -1,0 +1,18 @@
+[
+  {
+    "event_id": "IOT-388",
+    "room_id": "ROOM-A203",
+    "risk_state": "DANGER",
+    "health_state": "HEALTHY",
+    "reason": "gas_threshold",
+    "state": "CLOSED"
+  },
+  {
+    "event_id": "IOT-391",
+    "room_id": "ROOM-B105",
+    "risk_state": "UNKNOWN",
+    "health_state": "SENSOR_FAULT",
+    "reason": "sensor_self_check",
+    "state": "OPEN"
+  }
+]

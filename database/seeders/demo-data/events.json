@@ -1,0 +1,18 @@
+[
+  {
+    "event_id": "evt-01",
+    "event_type": "payment.recorded",
+    "source": "laravel",
+    "schema_version": "1",
+    "scope": "WSP-001",
+    "provenance": "production"
+  },
+  {
+    "event_id": "evt-02",
+    "event_type": "iot.safety.warning",
+    "source": "iot",
+    "schema_version": "2",
+    "scope": "ROOM-302",
+    "provenance": "production"
+  }
+]

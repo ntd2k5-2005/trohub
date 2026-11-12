@@ -1,0 +1,16 @@
+[
+  {
+    "id": "CON-011",
+    "listing_id": "LST-210",
+    "user_id": "USR-002",
+    "state": "AGREED",
+    "viewing_at": "2026-09-22T18:30:00+07:00"
+  },
+  {
+    "id": "CON-012",
+    "listing_id": "LST-210",
+    "user_id": "USR-804",
+    "state": "VIEWING_CONFIRMED",
+    "viewing_at": "2026-09-23T17:00:00+07:00"
+  }
+]

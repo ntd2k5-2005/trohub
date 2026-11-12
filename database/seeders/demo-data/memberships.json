@@ -1,0 +1,18 @@
+[
+  {
+    "id": "MBR-001",
+    "workspace_id": "WSP-001",
+    "account_id": "USR-001",
+    "group": "LANDLORD_OWNER",
+    "scope": "WORKSPACE",
+    "state": "ACTIVE"
+  },
+  {
+    "id": "MBR-002",
+    "workspace_id": "WSP-001",
+    "account_id": "USR-002",
+    "group": "TENANT_LINK",
+    "scope": "ROOM-302",
+    "state": "ACTIVE"
+  }
+]

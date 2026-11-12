@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ROOM-302",
+    "property_id": "PRO-001",
+    "code": "P302",
+    "area_m2": 25,
+    "monthly_rent": 4200000,
+    "state": "OCCUPIED"
+  },
+  {
+    "id": "ROOM-A203",
+    "property_id": "PRO-001",
+    "code": "A203",
+    "area_m2": 25,
+    "monthly_rent": 4200000,
+    "state": "AVAILABLE"
+  },
+  {
+    "id": "ROOM-B105",
+    "property_id": "PRO-002",
+    "code": "B105",
+    "area_m2": 23,
+    "monthly_rent": 3800000,
+    "state": "AVAILABLE"
+  }
+]

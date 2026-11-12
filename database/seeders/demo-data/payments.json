@@ -1,0 +1,18 @@
+[
+  {
+    "id": "PAY-8821",
+    "invoice_id": "INV-302-09",
+    "amount": 2000000,
+    "method": "BANK_TRANSFER",
+    "paid_at": "2026-09-21T20:15:00+07:00",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "PAY-8754",
+    "invoice_id": "INV-302-09",
+    "amount": 2500000,
+    "method": "CASH",
+    "paid_at": "2026-09-15T09:10:00+07:00",
+    "status": "CONFIRMED"
+  }
+]

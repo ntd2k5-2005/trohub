@@ -1,0 +1,9 @@
+[
+  {
+    "id": "WSP-001",
+    "name": "GreenHome",
+    "owner_id": "USR-001",
+    "subscription": "yearly",
+    "status": "ACTIVE"
+  }
+]

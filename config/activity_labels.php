@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'workspace.created' => 'Tạo khu quản lý',
+    'workspace.lifecycle.changed' => 'Thay đổi trạng thái khu quản lý',
+    'property.created' => 'Thêm nhà trọ',
+    'property.updated' => 'Cập nhật nhà trọ',
+    'room.created' => 'Thêm phòng',
+    'room.updated' => 'Cập nhật phòng',
+    'listing.created' => 'Tạo tin cho thuê',
+    'listing.updated' => 'Cập nhật tin cho thuê',
+    'listing.moderated' => 'Kiểm duyệt tin cho thuê',
+    'listing.published' => 'Đăng tin cho thuê',
+    'listing.hidden' => 'Ẩn tin cho thuê',
+    'rental.request.submitted' => 'Gửi yêu cầu thuê',
+    'rental.request.accepted' => 'Chấp thuận yêu cầu thuê',
+    'rental.hold.created' => 'Giữ phòng',
+    'rental.hold.expired' => 'Hết hạn giữ phòng',
+    'rental.activated' => 'Kích hoạt thuê phòng',
+    'contract.confirmed' => 'Xác nhận hợp đồng',
+    'invoice.created' => 'Lập hóa đơn',
+    'invoice.issued' => 'Phát hành hóa đơn',
+    'payment.received' => 'Xác nhận thu tiền',
+    'subscription.change.scheduled' => 'Xác nhận gói kỳ tiếp theo',
+    'subscription.change.applied' => 'Áp dụng kỳ gói mới',
+    'subscription.account.verified' => 'Xác nhận thanh toán gói',
+    'subscription.legacy.reviewed' => 'Đối chiếu gói cũ',
+];

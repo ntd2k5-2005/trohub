@@ -1,0 +1,60 @@
+.housing-page { --housing-muted: #64748b; }
+.housing-heading { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.housing-heading h1 { max-width:720px; font-size:clamp(1.65rem,3vw,2.55rem); font-weight:750; letter-spacing:-.035em; line-height:1.2; }
+.housing-eyebrow { font-size:11px; font-weight:750; letter-spacing:.13em; margin-bottom:12px; color:var(--app-primary); }
+.housing-lead { margin-top:14px; max-width:620px; font-size:14px; line-height:1.8; color:var(--housing-muted); }
+.housing-hero { padding:36px; border-radius:24px; background:linear-gradient(110deg,color-mix(in srgb,var(--app-primary) 12%,white),#f0fdfa); border:1px solid color-mix(in srgb,var(--app-primary) 15%,transparent); }
+.dark .housing-hero { background:linear-gradient(110deg,#1e2340,#122c30); }
+.dark .housing-lead { color:#a7b6cc; }
+.housing-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.housing-filters { display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; align-items:end; }
+.housing-filters label { display:block; font-size:12px; font-weight:600; margin-bottom:8px; }
+.housing-filter-more,.housing-filter-buttons { grid-column:1/-1; }
+.housing-filter-buttons { display:flex; gap:8px; }
+.housing-filter-fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.housing-create { display:flex; flex-wrap:wrap; gap:16px; align-items:start; }
+.housing-create > details { flex:1 1 280px; min-width:0; }
+.housing-create > details[open] { flex-basis:100%; }
+.housing-create > details[open] form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:start; }
+.housing-create > details[open] form > * { margin:0; min-width:0; }
+.housing-create > details[open] form > button { justify-self:start; }
+.housing-cards { gap:24px; }
+.housing-cover { position:relative; aspect-ratio:16/10; overflow:hidden; background:#e9edf5; }
+.housing-cover > a { display:block; height:100%; }
+.housing-cover img { width:100%; height:100%; object-fit:cover; transition:transform .3s; }
+.housing-cover a:hover img { transform:scale(1.035); }
+.housing-cover-badge,.housing-photo-count { position:absolute; border-radius:8px; font-size:11px; font-weight:650; padding:6px 9px; }
+.housing-cover-badge { left:14px; top:14px; background:#fffffff0; color:#334155; box-shadow:0 2px 6px #0001; }
+.housing-photo-count { right:14px; bottom:14px; color:white; background:#0f172abf; pointer-events:none; }
+.housing-card-title { font-size:17px; line-height:1.5; font-weight:700; overflow-wrap:anywhere; }
+.housing-card-title a:hover { color:var(--app-primary); }
+.housing-price { color:var(--app-primary); font-size:23px; font-weight:750; letter-spacing:-.03em; }
+.housing-price > span { color:var(--housing-muted); font-size:12px; font-weight:400; letter-spacing:0; }
+.housing-facts { font-size:14px; }
+.housing-facts > div { display:grid; grid-template-columns:minmax(90px,.75fr) minmax(0,1.25fr); gap:16px; padding:13px 0; border-bottom:1px solid #e2e8f080; }
+.housing-facts > div:last-child { border-bottom:0; }
+.housing-facts dt { color:var(--housing-muted); }
+.housing-facts dd { white-space:pre-line; overflow-wrap:anywhere; font-weight:500; }
+.dark .housing-facts > div { border-color:#33415580; }
+.housing-detail { display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,.75fr); align-items:start; gap:28px; }
+.housing-contact { position:sticky; top:90px; }
+.housing-detail > aside { grid-column:2; grid-row:1 / span 3; position:sticky; top:90px; }
+.housing-detail > section { grid-column:1; min-width:0; }
+.housing-chip { display:inline-flex; border-radius:8px; padding:6px 10px; font-size:12px; background:color-mix(in srgb,var(--app-primary) 8%,transparent); color:var(--app-primary); }
+.housing-avatar { display:grid; place-items:center; flex-shrink:0; width:48px; height:48px; border-radius:50%; background:color-mix(in srgb,var(--app-primary) 12%,transparent); color:var(--app-primary); font-size:20px; font-weight:700; }
+.housing-main-photo { aspect-ratio:4/3; max-height:540px; position:relative; background:#e9edf5; border-radius:20px; overflow:hidden; }
+.housing-main-photo img { width:100%; height:100%; object-fit:cover; }
+.housing-arrow { position:absolute; top:50%; transform:translateY(-50%); background:#fffffff0; color:#334155; width:38px; height:38px; border-radius:50%; font-size:28px; line-height:1; cursor:pointer; }
+.housing-arrow-prev { left:14px; }.housing-arrow-next { right:14px; }
+.housing-thumbnails { display:flex; gap:10px; overflow-x:auto; padding:12px 2px 4px; }
+.housing-thumbnails button { flex:0 0 88px; height:65px; border:2px solid transparent; padding:3px; border-radius:12px; overflow:hidden; }
+.housing-thumbnails button.is-active { border-color:var(--app-primary); }
+.housing-thumbnails img { width:100%; height:100%; object-fit:cover; border-radius:7px; }
+.housing-thumbnails > img { width:80px; height:64px; }
+.housing-viewer { margin:auto; border:0; border-radius:18px; padding:20px; max-width:94vw; max-height:94dvh; width:1000px; background:#0f172a; color:white; }
+.housing-viewer::backdrop { background:#020617db; }
+.housing-viewer img { margin:16px auto; max-height:65dvh; width:100%; object-fit:contain; }
+@media(min-width:1280px) { .housing-public-cards { grid-template-columns:repeat(3,minmax(0,1fr)); } .housing-public-cards > :nth-child(3n+1) { grid-column:1; } .housing-public-cards > :nth-child(3n+2) { grid-column:2; } .housing-public-cards > :nth-child(3n) { grid-column:3; } }
+@media(max-width:1023px) { .housing-detail { grid-template-columns:minmax(0,1fr) minmax(260px,.6fr); gap:20px; } }
+@media(max-width:767px) { .housing-detail { grid-template-columns:minmax(0,1fr); }.housing-detail > aside { grid-column:1; grid-row:2; position:static; }.housing-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }.housing-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }.housing-search { grid-column:1/-1; }.housing-hero { padding:24px; }.housing-heading { display:block; }.housing-heading > a { margin-top:18px; }.housing-create > details[open] form { display:block; }.housing-create > details[open] form > * + * { margin-top:16px; }.housing-filter-fields { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:380px) { .housing-filters,.housing-filter-fields { grid-template-columns:minmax(0,1fr); }.housing-facts > div { grid-template-columns:minmax(0,1fr); gap:6px; }.housing-price { font-size:21px; } }
